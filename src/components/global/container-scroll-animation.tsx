@@ -27,24 +27,19 @@ export const ContainerScroll = ({
 	}, []);
 
 	const scaleDimensions = () => {
-		return isMobile ? [0.7, 0.9] : [1.05, 1];
+		return isMobile ? [0.7, 0.9] : [0.9, 1.1];
 	};
 
-	const rotate = useTransform(scrollYProgress, [0, 1], [20, 0]);
+	const rotate = useTransform(scrollYProgress, [0, 1], [30, 0]);
 	const scale = useTransform(scrollYProgress, [0, 1], scaleDimensions());
-	const translate = useTransform(scrollYProgress, [0, 1], [0, -100]);
+	const translate = useTransform(scrollYProgress, [0, 1], [0, -150]);
 
 	return (
 		<div
 			className="h-[60rem] md:h-[80rem] 2xl:[120rem] flex items-center justify-center relative p-2 md:p-20"
 			ref={containerRef}
 		>
-			<div
-				className="py-10 md:py-40 w-full relative"
-				style={{
-					perspective: '1000px',
-				}}
-			>
+			<div className="py-10 md:py-40 w-full relative [perspective:500px]">
 				<Header
 					translate={translate}
 					titleComponent={titleComponent}

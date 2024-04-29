@@ -10,7 +10,7 @@ export default function Home() {
 	return (
 		<main className="flex items-center justify-center flex-col max-w-[100vw]">
 			<Navbar />
-			<section className="h-screen w-full bg-neutral-950 rounded-md  !overflow-visible relative flex flex-col items-center  antialiased">
+			<section className="h-screen w-full bg-neutral-950 rounded-md !overflow-visible relative flex flex-col items-center  antialiased">
 				<div className="absolute inset-0  h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_35%,#223_100%)]"></div>
 				<div className="flex flex-col  lg:mt-[10rem] 4xl:mt-[15rem]">
 					<ContainerScroll
@@ -41,12 +41,12 @@ export default function Home() {
 				</div>
 			</section>
 			<InfiniteMovingCards
-				className="mt-0 lg:mt-[16rem] max-w-[100vw]"
+				className="mt-0 lg:mt-[20%] 5xl:mt-[5%] max-w-[100vw]"
 				items={clients}
 				direction="right"
 				speed="slow"
 			/>
-			<section className="max-w-screen">
+			<section className="max-w-[100vw]">
 				<HeroParallax products={products}></HeroParallax>
 			</section>
 		</main>
